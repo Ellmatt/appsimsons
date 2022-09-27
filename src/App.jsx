@@ -1,24 +1,41 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card } from "react-bootstrap";
-
+import { Button, Card } from "react-bootstrap";
+import imagenLogo from "./img/image.png";
+import imagenHomero from "./img/logo192.png";
 import "./Estilo.css";
 
 function App() {
   // aqui va la logica
 
   return (
-    <Card className="text-center mx-3 my-3">
-       <Card border="warning" style={{ width: '100%' }}>
-        <Card.Header>Header</Card.Header>
-        <Card.Body>
-          <Card.Title>Warning Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
+    <section className="cbody py-4 text-center">
+      <Card
+        border="warning"
+        style={{ width: "100%"}}
+        className="cbody container py-5 px-5"
+      >
+        <div>
+          <Card.Img src={imagenLogo} className="w-50"></Card.Img>
+        </div>
+        <div>
+          <Button className="bg-warning text-dark my-5"> Obtener Frase </Button>
+        </div>
+        <Card border="danger">
+          <Card.Body className="row cdiv">
+            <div className="col-lg-4">
+              <Card.Img src={imagenHomero} className="w-75"></Card.Img>
+            </div>
+            <div className="col-lg-8">
+              <h2>Homer Simpson</h2>
+              <p>
+                Facts are meaningless. You could use facts to prove anithing
+                that's even remotely true.
+              </p>
+            </div>
+          </Card.Body>
+        </Card>
       </Card>
-    </Card>
+    </section>
   );
 }
 
