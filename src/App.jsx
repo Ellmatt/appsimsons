@@ -42,9 +42,9 @@ function App() {
         <Card.Img src={imagenLogo} className="w-75"></Card.Img>
       </div>
       <div>
-        <Button className="my-5" variant="warning">
-          {" "}
-          Obtener Frase{" "}
+        <Button className="my-5" variant="warning" onClick={consultarApi}>
+          
+          Obtener Frase
         </Button>
       </div>
 

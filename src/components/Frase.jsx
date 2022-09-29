@@ -1,20 +1,19 @@
 import React from "react";
 import { Card, Col, Image, Row } from "react-bootstrap";
-import imagenHomero from "../img/logo192.png";
 
-const Frase = () => {
+
+const Frase = (props) => {
   return (
     <Card>
       <Card.Body>
         <Row>
           <Col md={4}>
-            <Image src={imagenHomero} className="w-100"></Image>
+            <Image src={props.personaje.image} className="w-100" alt={props.personaje.character}></Image>
           </Col>
           <Col md={8}>
-            <Card.Title>Homer Simpson</Card.Title>
+            <Card.Title>{props.personaje.character}</Card.Title>
             <Card.Text>
-              Facts are meaningless. You could use facts to prove anithing
-              that's even remotely true.
+        { props.personaje.quote}
             </Card.Text>
           </Col>
         </Row>
